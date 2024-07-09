@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #072e33;">
+    <h1 style="margin-left: 11%; font-weight: bolder; color: #0c7078; text-shadow: 2px 3px 2px #0f989c;">MY BIO</h1>
+    <img src="teamom.png" alt="image not founds" id="sld" style="height: 130px;width: 140px; border-radius: 50px;margin-left: 10%;margin-top: -1.5%;"><br>
+    <button onclick="tea()" id="button" style="height: 40px; width: 100px; font-weight: bolder; margin-left: 11.4%; color: #0f989c; border-color:#0c7078; background-color: #072e33;">CLICK HERE</button>
+    <P style="width: 350px; height: auto; color: aqua; margin-left: 2%;font-weight: bolder; font-size: larger;" id="p"></P>
+    <a href="C:\Users\test\Desktop\bluetooth\index.html" id="a" ><button style="font-size: xx-large; font-style: italic; font-weight: bolder; text-shadow: 2px 2px 2px #0c7078; margin-left: 11.4%; border-color:#0c7078; background-color: #072e33; color: #0c7078; text-shadow: 2px 3px 2px #0f989c" id="b"></button></a>
+
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+    <script>
+        var imag = ['teamom.png', 'teamom1.png', 'teamom2.png', 'teamom3.png'];
+        var num = 0;
+        var time = setInterval(slide, 2000);
+        function slide(){
+        var sld = document.getElementById('sld');
+            num++;
+            if(num == imag.length){
+                num = 0;
+            }
+            sld.src = imag[num];
+        }
+        var i = 0;
+        var speed = 50;
+        var aa = 'more...'
+        var text = ' hello i am mustapha abubakar iliyasu by name student of yobe state university from department of computer science faculty of science 400level i specialized on front end development and i have a basics knowledge of back end development To know more about my skills click the button below';
+        function tea(){
+            if(i < text.length){
+                document.getElementById('p').innerHTML += text.charAt(i);
+                i++;
+                setTimeout(tea, speed);
+                responsiveVoice.speak(text);  
+            }
+            if(i == text.length){
+                document.getElementById('b').innerHTML = aa;
+            }
+        }
+    </script>
+</body>
+</html>
