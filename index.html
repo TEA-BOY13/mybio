@@ -6,11 +6,11 @@
     <title>Document</title>
 </head>
 <body style="background-color: #072e33;">
-    <h1 style="margin-left: 11%; font-weight: bolder; color: #0c7078; text-shadow: 2px 3px 2px #0f989c;">MY BIO</h1>
-    <img src="teamom.png" alt="image not founds" id="sld" style="height: 130px;width: 140px; border-radius: 50px;margin-left: 10%;margin-top: -1.5%;"><br>
-    <button onclick="tea()" id="button" style="height: 40px; width: 100px; font-weight: bolder; margin-left: 11.4%; color: #0f989c; border-color:#0c7078; background-color: #072e33;">CLICK HERE</button>
-    <P style="width: 350px; height: auto; color: aqua; margin-left: 2%;font-weight: bolder; font-size: larger;" id="p"></P>
-    <a href="cv.html" id="a" ><button style="font-size: xx-large; font-style: italic; font-weight: bolder; text-shadow: 2px 2px 2px #0c7078; margin-left: 11.4%; border-color:#0c7078; background-color: #072e33; color: #0c7078; text-shadow: 2px 3px 2px #0f989c" id="b"></button></a>
+    <h1 style="margin-left: 8%; font-weight: bolder; color: #0c7078; text-shadow: 2px 3px 2px #0f989c;">MY BIO</h1>
+    <img src="teamom.png" alt="image not founds" id="sld" style="height: 130px;width: 140px; border-radius: 50px;margin-left: 7%;margin-top: -1.5%;"><br>
+    <button onclick="tea()" id="button" style="height: 40px; width: 100px; font-weight: bolder; margin-left: 8%; color: #0f989c; border-color:#0c7078; background-color: #072e33;">CLICK HERE</button>
+    <P style="width: 300px; height: auto; color: aqua; margin-left: 1%;font-weight: bolder; font-size: larger;" id="p"></P>
+    <a href="cv.html" id="a" style="text-decoration: none;" ><button style="font-size: x-large; font-style: italic; font-weight: bolder; margin-left: 8%; border-color:#0c7078; background-color: #072e33; color: #0c7078; display: none;" id="b"></button></a>
 
     <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
     <script>
@@ -27,17 +27,21 @@
         }
         var i = 0;
         var speed = 50;
-        var aa = 'more...'
+        var aa = 'more >'
         var text = ' hello i am mustapha abubakar iliyasu by name student of yobe state university from department of computer science faculty of science 400level i specialized on front end development and i have a basics knowledge of back end development To know more about my skills click the button below';
         function tea(){
             if(i < text.length){
                 document.getElementById('p').innerHTML += text.charAt(i);
                 i++;
                 setTimeout(tea, speed);
-                responsiveVoice.speak(text);  
+                responsiveVoice.speak(text, "UK English Male");  
             }
             if(i == text.length){
                 document.getElementById('b').innerHTML = aa;
+                document.getElementById('b').style.display = "block";
+            }
+            if(i == text.length){
+                document.getElementById('button').style.display = "none";
             }
         }
     </script>
